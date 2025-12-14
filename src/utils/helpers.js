@@ -17,7 +17,7 @@ export const formatDate = (date) => {
 };
 
 export const generateId = () => {
-  return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  return `${Date.now()}-${Math.random().toString(36).substring(2, 11)}`;
 };
 
 export const truncateText = (text, maxLength) => {
@@ -120,4 +120,8 @@ export const sortProducts = (products, sortBy) => {
     default:
       return sorted;
   }
+};
+
+export const formatEnumKey = (key) => {
+  return key.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 };

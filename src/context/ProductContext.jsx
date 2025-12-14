@@ -8,7 +8,7 @@ export const ProductProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
 
   const getProductById = (id) => {
-    return products.find(product => product.id === parseInt(id));
+    return products.find(product => product.id === parseInt(id, 10));
   };
 
   const getProductsByCategory = (category) => {

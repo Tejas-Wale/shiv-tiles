@@ -69,9 +69,11 @@ export const ROOM_TEMPLATES = {
   LIVING_ROOM: 'living-room',
 };
 
+// Admin credentials for demo purposes only
+// In production, these should be stored securely and validated against a backend
 export const ADMIN_CREDENTIALS = {
-  email: 'admin@shivtiles.com',
-  password: 'admin123',
+  email: import.meta.env.VITE_ADMIN_EMAIL || 'admin@shivtiles.com',
+  password: import.meta.env.VITE_ADMIN_PASSWORD || 'admin123',
 };
 
 export const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '+919876543210';

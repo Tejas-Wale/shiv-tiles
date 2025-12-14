@@ -9,6 +9,7 @@ import {
   TILE_SIZES,
   TILE_FINISHES,
 } from '../../utils/constants';
+import { formatEnumKey } from '../../utils/helpers';
 
 const ProductFilter = ({ filters, onFilterChange, onReset }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -91,7 +92,7 @@ const ProductFilter = ({ filters, onFilterChange, onReset }) => {
                   onChange={(e) => handleFilterChange('type', e.target.value)}
                   className="mr-2"
                 />
-                {key.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                {formatEnumKey(key)}
               </label>
             ))}
           </div>
@@ -112,7 +113,7 @@ const ProductFilter = ({ filters, onFilterChange, onReset }) => {
                   onChange={(e) => handleFilterChange('type', e.target.value)}
                   className="mr-2"
                 />
-                {key.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                {formatEnumKey(key)}
               </label>
             ))}
           </div>

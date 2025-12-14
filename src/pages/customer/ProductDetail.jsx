@@ -16,7 +16,7 @@ const ProductDetail = () => {
   const { getProductById } = useContext(ProductContext);
   const { addToCart, addToWishlist, isInWishlist } = useCart();
   
-  const product = getProductById(parseInt(id));
+  const product = getProductById(parseInt(id, 10));
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
